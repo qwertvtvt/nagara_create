@@ -1,0 +1,65 @@
+.nav {
+    background-color: #666;
+}
+
+/* 横並び */
+.nav-container {
+    width: 90%;
+    height: 60px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* タイトル */
+.nav-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* メニュー */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
+    color: #aaa;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 640px) {
+
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-menu li {
+        padding: 10px 0;
+        border-top: 1px solid #fff;
+    }
+}

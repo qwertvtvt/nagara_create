@@ -1,8 +1,16 @@
 .top {
     /* 画像をいっぱいに表示 */
     background-size: cover;
+}
+
+.opacity {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.167); 
+
+    
     /* 表示する高さを画面の40％に */
-    height: 40vh;
+    height: 100vh;
     /* 表示幅を画面の90%に */
     width: 100%;
     /* フレックスボックスを指定*/

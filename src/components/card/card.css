@@ -20,6 +20,7 @@
 }
 
 .card-title {
+    padding: 20px;
     font-size: 1.8rem;
     font-weight: 600;
     color: #1b63a6;
@@ -43,5 +44,5 @@
 }
 
 .card-button:hover {
-    background-color: #0056b3;
+    background-color: #af570a;
 }

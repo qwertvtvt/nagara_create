@@ -41,21 +41,21 @@ function Home() {
                             title={"ライト"}
                             link={{ to: "https://kinchouen.co.jp/mizumanju/", text: "詳細をみる" }}
                         >
-                            おいしいよ
+                            
                         </Card>
 
                         <Card
                             title={"ベーシック"}
                             link={{ to: "https://kinchouen.co.jp/mizumanju/", text: "詳細をみる" }}
                         >
-                            おいしいよ
+                            
                         </Card>
 
                         <Card
                             title={"プレミアム"}
                             link={{ to: "https://kinchouen.co.jp/mizumanju/", text: "詳細をみる" }}
                         >
-                            おいしいよ
+                            
                         </Card>
                     </HStack>
                 </Section>

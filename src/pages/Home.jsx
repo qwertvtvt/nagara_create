@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import Navbar from "../components/navbar";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -16,6 +14,7 @@ function Home() {
                 title={"Nagara Create"}
                 links={[
                     { to: "/", content: "TOP" },
+                    { to: "/plans", content: "Service" },
                     { to: "/contact", content: "Contact" }
                 ]}
                 css={{
@@ -39,23 +38,23 @@ function Home() {
                     >
                         <Card
                             title={"ライト"}
-                            link={{ to: "https://kinchouen.co.jp/mizumanju/", text: "詳細をみる" }}
+                            link={{ to: "/plans#light", text: "詳細をみる" }}
                         >
-                            
+                            最安プラン
                         </Card>
 
                         <Card
                             title={"ベーシック"}
-                            link={{ to: "https://kinchouen.co.jp/mizumanju/", text: "詳細をみる" }}
+                            link={{ to: "/plans#basic", text: "詳細をみる" }}
                         >
-                            
+                            おすすめ
                         </Card>
 
                         <Card
                             title={"プレミアム"}
-                            link={{ to: "https://kinchouen.co.jp/mizumanju/", text: "詳細をみる" }}
+                            link={{ to: "/plans#premium", text: "詳細をみる" }}
                         >
-                            
+                            本格的
                         </Card>
                     </HStack>
                 </Section>

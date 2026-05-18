@@ -9,6 +9,7 @@ const Card = ({ image, title, link, children }) => {
                 <p className="card-text">
                     {children}
                 </p>
+                <br />
                 <a href={link.to} className="card-button">{link.text}</a>
             </div>
         </div>

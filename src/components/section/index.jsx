@@ -1,9 +1,9 @@
 import React from "react";
 import "./section.css"
 
-const Section = ({ title, css, children }) => {
+const Section = ({ title, css, children, id }) => {
     return (
-        <div className="section" style={css}>
+        <div className="section" style={css} id={id}>
             {title && (
                 <h2 className="title">{title}</h2>
             )}

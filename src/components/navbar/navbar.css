@@ -43,9 +43,28 @@
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: 10;
 }
 
 .nav-menu a:hover {
+    color: #aaa;
+}
+
+/* 中央エリア */
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 中央リンク */
+.nav-center a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-center a:hover {
     color: #aaa;
 }
 

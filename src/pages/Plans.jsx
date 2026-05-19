@@ -22,9 +22,7 @@ function Plans() {
                 }}
             />
 
-            <Header>
-                作成中
-            </Header>
+            
         </div>
     );
 }

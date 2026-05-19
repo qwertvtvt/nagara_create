@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import './navbar.css';
 
-const Navbar = ({ title, css, links }) => {
+const Navbar = ({ title, css, center, links }) => {
     return (
         <nav className="nav" style={css}>
             <div className="nav-container">
@@ -13,11 +13,14 @@ const Navbar = ({ title, css, links }) => {
                     <NavLink to="/">{title}</NavLink>
                 </div>
 
+                {/* 中央 メニュー */}
+                <div className="nav-center">
+                    {center}
+                </div>
+
                 {/* 右側 メニュー */}
                 <ul className="nav-menu">
-                    {links.map((link, index) => (
-                        <li key={index}><NavLink to={link.to}>{link.content}</NavLink></li>
-                    ))}                    
+                    {links}                   
                 </ul>
 
             </div>

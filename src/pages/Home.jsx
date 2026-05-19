@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useId } from "react";
 import { motion } from "motion/react";
 
 import Navbar from "../components/navbar";
+import { NavLink } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Section from "../components/section";
@@ -15,20 +16,32 @@ function Home() {
         <div className="App">
             <Navbar
                 title={"Nagara Create"}
-                links={[
-                    { to: "/", content: "TOP" },
-                    { to: "/plans", content: "Service" },
-                    { to: "/contact", content: "Contact" }
-                ]}
+                center={
+                    <>
+                        <a href="#news">最新情報</a>
+                        <a href="#about">概要</a>
+                        <a href="#features">特徴</a>
+                        <a href="#plans">プラン</a>
+                        <a href="#order">申し込みの流れ</a>
+                        <a href="#support">サポート</a>
+                    </>
+                }
+                links={
+                    <>
+                        <NavLink to="/">TOP</NavLink>
+                        <NavLink to="/plans">Services</NavLink>
+                        <NavLink to="/contact">Contact</NavLink>
+                    </>
+                }
                 css={{
                     backgroundColor: "black"
                 }}
             />
 
             <Header image={"https://picsum.photos/1000/300"}>
-                Make Gifu great again<br />
-                With Web Technology
+                
             </Header>
+
             <Main>
                 <Section title={"最新情報"}>
                     <p>準備中</p>
@@ -36,7 +49,21 @@ function Home() {
 
                 <Line />
 
-                <Section title={"料金・プラン"}>
+                <Section title={"長良クリエイトとは"} id="about">
+                    <p>しらね</p>
+                </Section>
+
+                <Line />
+
+                <Section title={"選ぶ理由"}>
+                    <p>うんち！ｗうおｗ</p>
+                </Section>
+
+                <Line />
+
+                <Section title={"料金・プラン"} id="features">
+                    <h3 style={{ fontSize: "1.3rem" }}>取得するドメイン名によって多少上下します</h3>
+                    <p>あくまで目安です　詳細は見積から</p>
                     <HStack justify_content={"center"}
                             align_items={"center"}
                     >

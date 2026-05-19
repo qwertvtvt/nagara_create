@@ -1,4 +1,6 @@
 .hstack {
     display: flex;
     width: 100%;
+    flex-wrap: nowrap;
+    gap: 24px;
 }

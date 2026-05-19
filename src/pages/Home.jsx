@@ -1,6 +1,3 @@
-import React, { useId } from "react";
-import { motion } from "motion/react";
-
 import Navbar from "../components/navbar";
 import { NavLink } from "react-router-dom";
 import Header from "../components/header";
@@ -38,8 +35,10 @@ function Home() {
                 }}
             />
 
-            <Header image={"https://picsum.photos/1000/300"}>
-                
+            <Header image={"https://yamachizu.jp/wp-content/uploads/2025/04/15-13-scaled.jpg"}>
+                <span className="top_brand">Nagara Create</span>
+                <br />
+                <span className="top_copy">長良をWebでクリエイトするんや</span>
             </Header>
 
             <Main>
@@ -50,13 +49,13 @@ function Home() {
                 <Line />
 
                 <Section title={"長良クリエイトとは"} id="about">
-                    <p>しらね</p>
+                    <p>しらね (作成中)</p>
                 </Section>
 
                 <Line />
 
                 <Section title={"選ぶ理由"}>
-                    <p>うんち！ｗうおｗ</p>
+                    <p>なんだろ (作成中)</p>
                 </Section>
 
                 <Line />

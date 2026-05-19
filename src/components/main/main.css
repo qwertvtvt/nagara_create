@@ -1,4 +1,4 @@
 .main {
-    width: 70%;
+    width: min(95%, 1200px);
     margin: auto;
 }

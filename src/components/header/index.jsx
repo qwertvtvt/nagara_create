@@ -10,7 +10,7 @@ const Header = ({image, children}) => {
                     className="top_msg"
                     initial={{ opacity: 0, y: 48 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.9, ease: "easeOut" }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     {children}
                 </motion.h1>

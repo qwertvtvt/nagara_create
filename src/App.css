@@ -16,3 +16,16 @@ body {
     font-family: sans-serif;
     height: 100%;
 }
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: purple;
+}
+
+.keiyaku {
+    font-size: large;
+}

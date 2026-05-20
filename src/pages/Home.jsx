@@ -19,7 +19,7 @@ function Home() {
                         <a href="#about">概要</a>
                         <a href="#features">特徴</a>
                         <a href="#plans">プラン</a>
-                        <a href="#order">申し込みの流れ</a>
+                        <a href="#order">制作の流れ</a>
                         <a href="#support">サポート</a>
                     </>
                 }
@@ -35,14 +35,14 @@ function Home() {
                 }}
             />
 
-            <Header image={"https://yamachizu.jp/wp-content/uploads/2025/04/15-13-scaled.jpg"}>
+            <Header image={"https://yamachizu.jp/wp-content/uploads/2025/04/15-13-scaled.jpg"} id="top">
                 <span className="top_brand">Nagara Create</span>
                 <br />
-                <span className="top_copy">長良をWebでクリエイトするんや</span>
+                <span className="top_copy">キャッチコピー</span>
             </Header>
 
             <Main>
-                <Section title={"最新情報"}>
+                <Section title={"最新情報"} id="news">
                     <p>準備中</p>
                 </Section>
 
@@ -54,15 +54,16 @@ function Home() {
 
                 <Line />
 
-                <Section title={"選ぶ理由"}>
+                <Section title={"選ぶ理由"} id="features">
                     <p>なんだろ (作成中)</p>
                 </Section>
 
                 <Line />
 
-                <Section title={"料金・プラン"} id="features">
+                <Section title={"料金・プラン"} id="plans">
                     <h3 style={{ fontSize: "1.3rem" }}>取得するドメイン名によって多少上下します</h3>
                     <p>あくまで目安です　詳細は見積から</p>
+                    <br />
                     <HStack justify_content={"center"}
                             align_items={"center"}
                     >
@@ -141,6 +142,67 @@ function Home() {
                             </div>
                         </Card>
                     </HStack>
+                </Section>
+
+                <Line />
+
+                <Section title={"契約・制作の流れ"} id="order">
+                    <Card
+                        title="① お問い合わせ"
+                        css={{
+                            margin: "auto",
+                            width: "80%",
+                            textAlign: "left"
+                        }}
+                    >
+                        <Line color={"#c5c5c5"} />
+                        <br />
+                        <p className="keiyaku"><NavLink to="/contact">問い合わせフォーム</NavLink>よりご連絡いただき、</p>
+                        <p className="keiyaku">お客様の情報や制作したいWebサイトの概要をお伝えしていただきます</p><br />
+                        <p className="keiyaku">ご連絡いただいたあと、詳しい要望を直接伺います</p>
+                    </Card>
+                    <br />
+                    <Card
+                        title="② お見積り・契約"
+                        css={{
+                            margin: "auto",
+                            width: "80%",
+                            textAlign: "left"
+                        }}
+                    >
+                        <Line color={"#c5c5c5"} />
+                        <br />
+                        <p className="keiyaku">伺った要望からサイトの規模を見積もり、適した<a href="#plans">プラン</a>を提案いたします</p>
+                        <p className="keiyaku">合意を得たのち、契約書を発行いたします</p>
+                    </Card>
+                    <br />
+                    <Card
+                        title="③ 制作開始"
+                        css={{
+                            margin: "auto",
+                            width: "80%",
+                            textAlign: "left"
+                        }}
+                    >
+                        <Line color={"#c5c5c5"} />
+                        <br />
+                        <p className="keiyaku">お客様のご要望やプランをもとに、Webサイトの制作を開始します</p>
+                    </Card>
+                    <br />
+                    <Card
+                        title="④ 納品・運用"
+                        css={{
+                            margin: "auto",
+                            width: "80%",
+                            textAlign: "left"
+                        }}
+                    >
+                        <Line color={"#c5c5c5"} />
+                        <br />
+                        <p className="keiyaku">Webサイトが完成次第、お客様の同意を得てから納品、インターネット上で公開します</p>
+                        <p className="keiyaku">納品と同時に初期費用と最初の月額をいただきます</p>
+                        <p className="keiyaku"><NavLink to="/plans#pay">お支払方法についてはこちらをご覧ください</NavLink></p>
+                    </Card>
                 </Section>
             </Main>
 

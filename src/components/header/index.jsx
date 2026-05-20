@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 
 import "./header.css";
 
-const Header = ({image, children}) => {
+const Header = ({image, id, children}) => {
     return (
-        <header className="top" style={{ backgroundImage: `url("${image}")`}}>
+        <header className="top" style={{ backgroundImage: `url("${image}")`}} id={id}>
             <div className="opacity">
                 <motion.h1
                     className="top_msg"

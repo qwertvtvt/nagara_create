@@ -1,16 +1,18 @@
 import "./card.css"
 
-const Card = ({ image, title, link, children }) => {
+const Card = ({ image, title, link, css, children }) => {
     return (
-        <div className="card">
+        <div className="card" style={css}>
             {image && ( <img src={image} /> )}
             <div className="card-content">
                 <h3 className="card-title">{title}</h3>
-                <p className="card-text">
+                <div className="card-text">
                     {children}
-                </p>
-                <br />
-                <a href={link.to} className="card-button">{link.text}</a>
+                </div>
+                {link && (
+                    <><br />
+                    <a href={link.to} className="card-button" style={{ color: "#fff" }}>{link.text}</a></>
+                )}
             </div>
         </div>
     );

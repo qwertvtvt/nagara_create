@@ -23,9 +23,13 @@
 .card-title {
     padding: 20px;
     font-size: 1.8rem;
+    line-height: 1.35;
     font-weight: 600;
     color: #1b63a6;
     margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .card-text {

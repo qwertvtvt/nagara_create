@@ -9,47 +9,26 @@ import Line from "../components/line";
 import Main from "../components/main";
 import Card from "../components/card";
 
+import plans from "../data/plans";
+import nav from "../data/nav";
+
 function Home() {
+    const featureCardTitleOneLineCss = {
+        height: "5rem",
+        alignItems: "center"
+    };
+
+    const featureCardTitleTwoLineCss = {
+        height: "7.5rem",
+        alignItems: "flex-start"
+    };
+
     return (
         <div className="App">
             <Navbar
                 title={"Nagara Create"}
                 links={
-                    <DropDown
-                        lists={[
-                            {
-                                title: "TOP",
-                                links: [
-                                    { to: "/#top", content: "トップ" },
-                                    { to: "/#news", content: "最新情報" },
-                                    { to: "/#about", content: "長良クリエイトとは" },
-                                    { to: "/#features", content: "選ぶ理由" },
-                                    { to: "/#plans", content: "プラン" },
-                                    { to: "/#order", content: "制作の流れ" },
-                                ]
-                            },
-                            {
-                                title: "組織概要",
-                                links: [
-                                    { to: "/about", content: "概要" }
-                                ]
-                            },
-                            {
-                                title: "サービス",
-                                links: [
-                                    { to: "/service/homepage", content: "ホームページ制作" },
-                                    { to: "/plans", content: "プラン" },
-                                    { to: "/works", content: "実績" }
-                                ]
-                            },
-                            {
-                                title: "製品",
-                                links: [
-                                    { to: "/products/cms", content: "TinyCMS" }
-                                ]
-                            }
-                        ]}
-                    />
+                    <DropDown lists={nav} />
                 }
                 css={{
                     backgroundColor: "black"
@@ -70,13 +49,53 @@ function Home() {
                 <Line />
 
                 <Section title={"長良クリエイトとは"} id="about">
-                    <p>しらね (作成中)</p>
+                    <Line color={"#c5c5c5"} css={{ width: "80%", margin: "auto" }} />
+                    <div style={{ textAlign: "left", padding: "20px", width: "70%", margin: "auto" }}>
+                        <p>長良クリエイトとは、岐阜の商業高校生を中心としたWeb制作・地域活性化チームです。</p>
+                        <p>岐阜には素敵なお店がたくさんあります。しかし、それらの多くはホームページを持っておらず、</p>
+                        <p>情報が少なくてたどり着くのが大変なことがあります。</p>
+                        <p>「素晴らしい商品やサービスやこだわりがあるのに、ネット上に情報が少なくて人が来ない」</p>
+                        <p>そんな地元の個人営業の店舗様をWebのテクノロジーでサポートしたいという思いから、私達の活動が始まりました。</p>
+                        <p>見栄えがいいだけでなく、お店の経営に寄り添い、必要な機能だけを「ちょうどいい価格」で提供します。</p>
+                        <p>美しい岐阜の街並み、観光、そして小さなお店の賑わいを、</p>
+                        <p>デジタルを通じて少しずつ盛り上げることが、私達のミッションです。</p>
+                    </div>
+                    <Line color={"#c5c5c5"} css={{ width: "80%", margin: "auto" }} />
                 </Section>
 
                 <Line />
 
                 <Section title={"選ぶ理由"} id="features">
-                    <p>なんだろ (作成中)</p>
+                    <HStack css={{ width: "80%", margin: "auto" }}>
+                        <Card title="地域密着・対面サポート" css={{ width: "50%", textAlign: "left" }} titleCss={featureCardTitleOneLineCss}>
+                            <p>私達は全員岐阜に暮らしています。メールや電話だけのやり取りだけでなく、</p>
+                            <p>実際にお店の足を運び、お顔を合わせて丁寧にお話を伺います</p>
+                            <p>連絡も取りやすく、お店のリアルな魅力が伝わるWebサイトを提案できます</p>
+                        </Card>
+
+                        <Card title="圧倒的安さ" css={{ width: "50%", textAlign: "left" }} titleCss={featureCardTitleOneLineCss}>
+                            <p>大手制作会社なら数十万円かかるホームページ制作を、</p>
+                            <p>初期費用2万円台からという圧倒的な価格破壊で提供します</p>
+                            <p>学生チームだからこそできる最小限な原価構造により、「無理なく始められる」価格を構築しました</p>
+                        </Card>
+                    </HStack>
+                    <br />
+                    <HStack css={{ width: "80%", margin: "auto" }}>
+                        <Card title="確かな技術力" css={{ width: "50%", textAlign: "left" }} titleCss={featureCardTitleTwoLineCss}>
+                            <p>開発メンバーは全員、営業メンバーまでもが国家資格である「基本情報技術者」を取得しています</p>
+                            <p>「学生だから趣味レベルなのでは」という心配はいりません。</p>
+                            <p>国に認められた確かな技術力と、最新のフロントエンド技術を用いて、</p>
+                            <p>安全で美しいWebサイトを構築します</p>
+                        </Card>
+
+                        <Card title='独自の軽量システム『TinyCMS』' css={{ width: "50%", textAlign: "left" }} titleCss={featureCardTitleTwoLineCss}>
+                            <p>難しいPCの知識は一切不要です。</p>
+                            <p>TinyCMSによってお知らせページの更新が非常に簡単にできるようになります。</p>
+                            <p>お店のお知らせや定休日の案内を、スマートフォンから "ちょっとしたSNS" に書き込むような、</p>
+                            <p>シンプルな操作だけで、いつでも即座にサイトを更新できる、</p>
+                            <p>独自開発の超軽量システム『TinyCMS』を全プランで標準搭載しています。</p>
+                        </Card>
+                    </HStack>
                 </Section>
 
                 <Line />
@@ -86,11 +105,11 @@ function Home() {
                     <p>あくまで目安です　詳細は見積から</p>
                     <br />
                     <HStack justify_content={"center"}
-                            align_items={"center"}
+                            align_items={"stretch"}
                     >
                         <Card
                             title={"ライト"}
-                            link={{ to: "/plans#light", text: "詳細をみる" }}
+                            link={{ to: "/services/plans#light", text: "詳細をみる" }}
                         >
                             まずは名刺代わりに<br />
                             コストを抑えたプラン<br />
@@ -99,10 +118,10 @@ function Home() {
                             <Line color={"#c5c5c5"} />
                             <br />
                             初期費用
-                            <h3 style={{ fontSize: "1.5em" }}>20,500円</h3>
+                            <h3 style={{ fontSize: "1.5em" }}>{plans.light.init.toLocaleString()}円</h3>
                             <br />
                             月額
-                            <h3 style={{ fontSize: "1.5em" }}>5,850円</h3>
+                            <h3 style={{ fontSize: "1.5em" }}>{plans.light.monthly.toLocaleString()}円</h3>
                             <br />
                             <Line color={"#c5c5c5"} />
                             <br />
@@ -115,7 +134,7 @@ function Home() {
 
                         <Card
                             title={"ベーシック"}
-                            link={{ to: "/plans#basic", text: "詳細をみる" }}
+                            link={{ to: "/services/plans#basic", text: "詳細をみる" }}
                         >
                             お店の魅力をしっかり伝える、<br />
                             長良クリエイトの王道プラン<br />
@@ -124,10 +143,10 @@ function Home() {
                             <Line color={"#c5c5c5"} />
                             <br />
                             初期費用
-                            <h3 style={{ fontSize: "1.5em" }}>25,000円</h3>
+                            <h3 style={{ fontSize: "1.5em" }}>{plans.basic.init.toLocaleString()}円</h3>
                             <br />
                             月額
-                            <h3 style={{ fontSize: "1.5em" }}>8,700円</h3>
+                            <h3 style={{ fontSize: "1.5em" }}>{plans.basic.monthly.toLocaleString()}円</h3>
                             <br />
                             <Line color={"#c5c5c5"} />
                             <br />
@@ -140,7 +159,7 @@ function Home() {
 
                         <Card
                             title={"プレミアム"}
-                            link={{ to: "/plans#premium", text: "詳細をみる" }}
+                            link={{ to: "/services/plans#premium", text: "詳細をみる" }}
                         >
                             Google Analyticsや特注ページ<br />
                             ビジネスを加速させる<br />
@@ -149,10 +168,10 @@ function Home() {
                             <Line color={"#c5c5c5"} />
                             <br />
                             初期費用
-                            <h3 style={{ fontSize: "1.5em" }}>47,500円</h3>
+                            <h3 style={{ fontSize: "1.5em" }}>{plans.premium.init.toLocaleString()}円</h3>
                             <br />
                             月額
-                            <h3 style={{ fontSize: "1.5em" }}>16,450円</h3>
+                            <h3 style={{ fontSize: "1.5em" }}>{plans.premium.monthly.toLocaleString()}円</h3>
                             <br />
                             <Line color={"#c5c5c5"} />
                             <br />
@@ -222,7 +241,7 @@ function Home() {
                         <br />
                         <p className="keiyaku">Webサイトが完成次第、お客様の同意を得てから納品、インターネット上で公開します</p>
                         <p className="keiyaku">納品と同時に初期費用と最初の月額をいただきます</p>
-                        <p className="keiyaku"><NavLink to="/plans#pay">お支払方法についてはこちらをご覧ください</NavLink></p>
+                        <p className="keiyaku"><NavLink to="/services/plans#pay">お支払方法についてはこちらをご覧ください</NavLink></p>
                     </Card>
                 </Section>
             </Main>

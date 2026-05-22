@@ -1,11 +1,15 @@
 import "./card.css"
 
-const Card = ({ image, title, link, css, children }) => {
+const Card = ({ image, title, link, css, titleCss, children }) => {
+    const cardStyle = css?.width
+        ? { ...css, flexBasis: css.width }
+        : css;
+
     return (
-        <div className="card" style={css}>
+        <div className="card" style={cardStyle}>
             {image && ( <img src={image} /> )}
             <div className="card-content">
-                <h3 className="card-title">{title}</h3>
+                <h3 className="card-title" style={titleCss}>{title}</h3>
                 <div className="card-text">
                     {children}
                 </div>

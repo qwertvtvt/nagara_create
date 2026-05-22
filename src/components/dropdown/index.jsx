@@ -6,7 +6,7 @@ const DropDown = ({ lists }) => {
             <ul className="gnavi_lists">
                 {lists.map((list, index1) => (
                     <li className="gnavi_list" key={index1}>
-                        <a href="javascript:void(0)">{list.title}</a>
+                        <button>{list.title}</button>
                         <ul className="dropdown_lists">
                             {list.links.map((link, index2) => (
                                 <li className="dropdown_list" key={index2}><a href={link.to}>{link.content}</a></li>

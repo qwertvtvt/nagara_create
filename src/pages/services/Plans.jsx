@@ -1,12 +1,7 @@
-import Navbar from "../components/navbar";
+import Navbar from "../../components/navbar";
 import { NavLink } from "react-router-dom";
-import Hero from "../components/hero";
-import Footer from "../components/footer";
-import Section from "../components/section";
-import HStack from "../components/hstack";
-import Line from "../components/line";
-import Main from "../components/main";
-import Card from "../components/card";
+import Section from "../../components/section";
+import Main from "../../components/main";
 
 function Plans() {
     return (
@@ -24,7 +19,7 @@ function Plans() {
                 links={
                     <>
                         <NavLink to="/">TOP</NavLink>
-                        <NavLink to="/plans">Services</NavLink>
+                        <NavLink to="/services/plans">Services</NavLink>
                         <NavLink to="/contact">Contact</NavLink>
                     </>
                 }

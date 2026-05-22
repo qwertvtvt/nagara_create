@@ -11,12 +11,7 @@ const Navbar = ({ title, css, center, links }) => {
                 {/* 左側 タイトル */}
                 <div className="nav-logo">
                     <a href="#top">{title}</a>
-                </div>
-
-                {/* 中央 メニュー */}
-                <div className="nav-center">
-                    {center}
-                </div>
+                </div>          
 
                 {/* 右側 メニュー */}
                 <ul className="nav-menu">

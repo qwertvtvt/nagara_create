@@ -1,6 +1,6 @@
 import Navbar from "../components/navbar";
 import { NavLink } from "react-router-dom";
-import Header from "../components/header";
+import Hero from "../components/hero";
 import Footer from "../components/footer";
 import Section from "../components/section";
 import HStack from "../components/hstack";
@@ -15,10 +15,9 @@ function Plans() {
                 title={"Nagara Create"}
                 center={
                     <>
-                        <a href="#about">概要</a>
                         <a href="#features">特徴</a>
                         <a href="#plans">プラン</a>
-                        <a href="#order">申し込みの流れ</a>
+                        <a href="#order">制作の流れ</a>
                         <a href="#support">サポート</a>
                     </>
                 }
@@ -34,7 +33,11 @@ function Plans() {
                 }}
             />
 
-            
+            <Main>
+                <Section title="プラン">
+
+                </Section>
+            </Main>
         </div>
     );
 }

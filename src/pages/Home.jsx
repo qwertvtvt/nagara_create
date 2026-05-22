@@ -1,6 +1,7 @@
 import Navbar from "../components/navbar";
 import { NavLink } from "react-router-dom";
-import Header from "../components/header";
+import DropDown from "../components/dropdown";
+import Hero from "../components/hero";
 import Footer from "../components/footer";
 import Section from "../components/section";
 import HStack from "../components/hstack";
@@ -13,33 +14,53 @@ function Home() {
         <div className="App">
             <Navbar
                 title={"Nagara Create"}
-                center={
-                    <>
-                        <a href="#news">最新情報</a>
-                        <a href="#about">概要</a>
-                        <a href="#features">特徴</a>
-                        <a href="#plans">プラン</a>
-                        <a href="#order">制作の流れ</a>
-                        <a href="#support">サポート</a>
-                    </>
-                }
                 links={
-                    <>
-                        <NavLink to="/">TOP</NavLink>
-                        <NavLink to="/plans">Services</NavLink>
-                        <NavLink to="/contact">Contact</NavLink>
-                    </>
+                    <DropDown
+                        lists={[
+                            {
+                                title: "TOP",
+                                links: [
+                                    { to: "/#top", content: "トップ" },
+                                    { to: "/#news", content: "最新情報" },
+                                    { to: "/#about", content: "長良クリエイトとは" },
+                                    { to: "/#features", content: "選ぶ理由" },
+                                    { to: "/#plans", content: "プラン" },
+                                    { to: "/#order", content: "制作の流れ" },
+                                ]
+                            },
+                            {
+                                title: "組織概要",
+                                links: [
+                                    { to: "/about", content: "概要" }
+                                ]
+                            },
+                            {
+                                title: "サービス",
+                                links: [
+                                    { to: "/service/homepage", content: "ホームページ制作" },
+                                    { to: "/plans", content: "プラン" },
+                                    { to: "/works", content: "実績" }
+                                ]
+                            },
+                            {
+                                title: "製品",
+                                links: [
+                                    { to: "/products/cms", content: "TinyCMS" }
+                                ]
+                            }
+                        ]}
+                    />
                 }
                 css={{
                     backgroundColor: "black"
                 }}
             />
 
-            <Header image={"https://yamachizu.jp/wp-content/uploads/2025/04/15-13-scaled.jpg"} id="top">
+            <Hero image={"https://yamachizu.jp/wp-content/uploads/2025/04/15-13-scaled.jpg"} id="top">
                 <span className="top_brand">Nagara Create</span>
                 <br />
                 <span className="top_copy">キャッチコピー</span>
-            </Header>
+            </Hero>
 
             <Main>
                 <Section title={"最新情報"} id="news">

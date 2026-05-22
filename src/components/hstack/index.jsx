@@ -1,6 +1,6 @@
 import "./hstack.css"
 
-const HStack = ({ justify_content, align_items,  css,  children }) => {
+const HStack = ({ justify_content, align_items, css, children }) => {
     return (
         <div className="hstack" style={{
             justifyContent: justify_content,

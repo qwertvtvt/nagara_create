@@ -1,0 +1,62 @@
+.top {
+    /* 画像をいっぱいに表示 */
+    background-size: cover;
+    background-position: center;
+}
+
+.opacity {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.654); 
+
+    
+    /* 表示する高さを画面の40％に */
+    height: 100vh;
+    /* 表示幅を画面の90%に */
+    width: 100%;
+    /* フレックスボックスを指定*/
+    display: flex;
+    /* フレックスアイテムを左寄せに配置*/
+    justify-content: flex-start;
+    /* フレックスアイテムを使って上下から中央に配置 */
+    align-items: center;
+    /* テキストの配置を左揃えに */
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0 10%;
+}
+
+.top_msg {
+    /* 文字色を白に */
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.top_brand {
+    display: inline-block;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.top_copy {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 640px) {
+    .opacity {
+        padding: 0 24px;
+    }
+
+    .top_brand {
+        font-size: 3.2rem;
+    }
+
+    .top_copy {
+        font-size: 1.2rem;
+    }
+}

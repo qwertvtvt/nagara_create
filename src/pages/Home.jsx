@@ -82,7 +82,7 @@ function Home() {
                     <br />
                     <HStack css={{ width: "80%", margin: "auto" }}>
                         <Card title="確かな技術力" css={{ width: "50%", textAlign: "left" }} titleCss={featureCardTitleTwoLineCss}>
-                            <p>開発メンバーは全員、営業メンバーまでもが国家資格である「基本情報技術者」を取得しています</p>
+                            <p>ほとんどのメンバーが情報技術の国家資格である「基本情報技術者」を取得しています</p>
                             <p>「学生だから趣味レベルなのでは」という心配はいりません。</p>
                             <p>国に認められた確かな技術力と、最新のフロントエンド技術を用いて、</p>
                             <p>安全で美しいWebサイトを構築します</p>

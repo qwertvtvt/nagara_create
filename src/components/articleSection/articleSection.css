@@ -1,0 +1,83 @@
+.article-section {
+    scroll-margin-top: var(--article-scroll-margin-top, 92px);
+    border-bottom: var(--article-border-bottom, 1px solid #d8d8d8);
+    padding: var(--article-padding, 0 0 56px);
+    margin: var(--article-margin, 0 0 56px);
+    text-align: var(--article-text-align, left);
+}
+
+.article-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.article-section-header {
+    display: grid;
+    grid-template-columns: var(--article-header-columns, minmax(0, 1fr) auto);
+    gap: var(--article-header-gap, 32px);
+    align-items: var(--article-header-align, start);
+}
+
+.article-section-eyebrow {
+    margin: var(--article-eyebrow-margin, 0 0 8px);
+    color: var(--article-accent-color, #1b63a6);
+    font-size: var(--article-eyebrow-size, 0.85rem);
+    font-weight: 700;
+    letter-spacing: var(--article-eyebrow-letter-spacing, 0.08em);
+    text-transform: var(--article-eyebrow-transform, uppercase);
+}
+
+.article-section h1,
+.article-section h2 {
+    margin: var(--article-heading-margin, 0 0 18px);
+    color: var(--article-heading-color, #111);
+    line-height: var(--article-heading-line-height, 1.25);
+}
+
+.article-section h1 {
+    font-size: var(--article-h1-size, 3rem);
+}
+
+.article-section h2 {
+    font-size: var(--article-h2-size, 2.2rem);
+}
+
+.article-section h3 {
+    margin: var(--article-h3-margin, 0 0 12px);
+    color: var(--article-accent-color, #1b63a6);
+    font-size: var(--article-h3-size, 1.3rem);
+}
+
+.article-section p {
+    line-height: var(--article-body-line-height, 1.8);
+}
+
+.article-section-description {
+    margin: 0;
+}
+
+.article-section-aside {
+    width: var(--article-aside-width, 260px);
+}
+
+.article-section-body {
+    margin-top: var(--article-body-margin-top, 32px);
+}
+
+@media screen and (max-width: 900px) {
+    .article-section-header {
+        grid-template-columns: 1fr;
+    }
+
+    .article-section-aside {
+        width: auto;
+    }
+
+    .article-section h1 {
+        font-size: var(--article-mobile-h1-size, 2.3rem);
+    }
+
+    .article-section h2 {
+        font-size: var(--article-mobile-h2-size, 1.8rem);
+    }
+}

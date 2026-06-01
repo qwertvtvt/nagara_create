@@ -1,0 +1,27 @@
+.price-box {
+    border: var(--price-box-border, 1px solid #ddd);
+    background: var(--price-box-bg, #f6f6f6);
+    padding: var(--price-box-padding, 20px);
+}
+
+.price-box dl {
+    margin: 0;
+}
+
+.price-box div + div {
+    border-top: var(--price-box-divider, 1px solid #d8d8d8);
+    margin-top: var(--price-box-item-gap, 16px);
+    padding-top: var(--price-box-item-gap, 16px);
+}
+
+.price-box dt {
+    color: var(--price-box-label-color, #555);
+    font-size: var(--price-box-label-size, 0.95rem);
+}
+
+.price-box dd {
+    margin: var(--price-box-value-margin, 6px 0 0);
+    color: var(--price-box-value-color, #111);
+    font-size: var(--price-box-value-size, 1.8rem);
+    font-weight: var(--price-box-value-weight, 700);
+}

@@ -1,0 +1,25 @@
+.detail-grid {
+    display: grid;
+    grid-template-columns: var(--detail-grid-columns, 1fr 1fr);
+    gap: var(--detail-grid-gap, 32px);
+}
+
+.detail-grid-item ul {
+    margin: var(--detail-list-margin, 0);
+    padding-left: var(--detail-list-padding-left, 1.2em);
+    line-height: var(--detail-list-line-height, 1.9);
+}
+
+.detail-grid-item p {
+    margin: var(--detail-text-margin, 0);
+}
+
+.detail-grid-item {
+    min-width: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}

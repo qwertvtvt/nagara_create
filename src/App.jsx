@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css"
 
 import Home from "./pages/Home";
-import Plans from "./pages/services/Plans";
+import Plans from "./pages/services/plans";
 import Homepage from "./pages/services/homepage";
 import Works from "./pages/services/works";
 import TinyCMS from "./pages/products/tinycms";

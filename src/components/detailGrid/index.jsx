@@ -6,12 +6,15 @@ const DetailGrid = ({ items, css }) => {
             {items.map((item) => (
                 <div className="detail-grid-item" key={item.title}>
                     <h3>{item.title}</h3>
+                    {item.price && (
+                        <p className="detail-grid-price">{item.price}</p>
+                    )}
                     {item.list ? (
-                        <ul>
+                        <>
                             {item.list.map((listItem) => (
-                                <li key={listItem}>{listItem}</li>
+                                <p key={listItem}>{listItem}</p>
                             ))}
-                        </ul>
+                        </>
                     ) : (
                         <p>{item.text}</p>
                     )}

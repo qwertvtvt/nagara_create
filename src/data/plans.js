@@ -1,15 +1,15 @@
 const data = {
     light: {
-        init: 20500,
-        monthly: 1750
+        init: 19000,
+        monthly: 2750
     },
     basic: {
         init: 25000,
-        monthly: 2900
+        monthly: 3700
     },
     premium: {
-        init: 47500,
-        monthly: 5150
+        init: 50000,
+        monthly: 5450
     }
 }
 

@@ -14,6 +14,14 @@
     margin: var(--detail-text-margin, 0);
 }
 
+.detail-grid-item .detail-grid-price {
+    color: var(--detail-price-color, #111);
+    font-size: var(--detail-price-size, 1.15rem);
+    font-weight: var(--detail-price-weight, 700);
+    line-height: var(--detail-price-line-height, 1.4);
+    margin: var(--detail-price-margin, 0 0 12px);
+}
+
 .detail-grid-item {
     min-width: 0;
 }

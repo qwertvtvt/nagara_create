@@ -154,6 +154,8 @@ const optionDetails = [
 function Plans() {
     return (
         <div className="App">
+            <title>プラン詳細 - Nagara Create</title>
+            
             <Navbar
                 title={"Nagara Create"}
                 links={<DropDown lists={nav} />}

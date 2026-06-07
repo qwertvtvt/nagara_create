@@ -10,7 +10,7 @@ const Navbar = ({ title, css, center, links }) => {
 
                 {/* 左側 タイトル */}
                 <div className="nav-logo">
-                    <a href="#top">{title}</a>
+                    <a href="/#top">{title}</a>
                 </div>          
 
                 {/* 右側 メニュー */}

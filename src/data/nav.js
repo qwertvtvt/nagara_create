@@ -13,7 +13,8 @@ const nav = [
     {
         title: "組織概要",
         links: [
-            { to: "/about", content: "概要" }
+            { to: "/about#about", content: "概要" },
+            { to: "/about#history", content: "沿革" },
         ]
     },
     {

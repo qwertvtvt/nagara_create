@@ -12,6 +12,8 @@ import Card from "../components/card";
 import plans from "../data/plans";
 import nav from "../data/nav";
 
+import heroImage from "../assets/hero.jpg";
+
 function Home() {
     const featureCardTitleOneLineCss = {
         height: "5rem",
@@ -35,7 +37,7 @@ function Home() {
                 }}
             />
 
-            <Hero image={"https://yamachizu.jp/wp-content/uploads/2025/04/15-13-scaled.jpg"} id="top">
+            <Hero image={heroImage} id="top">
                 <span className="top_brand">Nagara Create</span>
                 <br />
                 <span className="top_copy">キャッチコピー</span>

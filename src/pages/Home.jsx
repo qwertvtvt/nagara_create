@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+
 import Navbar from "../components/navbar";
 import { NavLink } from "react-router-dom";
 import DropDown from "../components/dropdown";
@@ -15,6 +17,30 @@ import nav from "../data/nav";
 import heroImage from "../assets/hero.jpg";
 
 function Home() {
+    const [ catchCopy, setCatchCopy ] = useState("岐阜の、岐阜による、岐阜のためのホームページ。");
+
+    useEffect(() => {
+        const secretCode = ["1", "1", "4", "5", "1", "4"];
+
+        let buf = [];
+
+        const handleKeyDown = (event) => {
+            if(event.key == "NumLock") return;
+            buf.push(event.key);
+            buf = buf.slice(-secretCode.length);
+            const isMatch = buf.join(',').toLowerCase() === secretCode.join(',').toLowerCase();
+            if(isMatch) {
+                setCatchCopy("良い世、来いよ");
+            }
+        }
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
     const featureCardTitleOneLineCss = {
         height: "5rem",
         alignItems: "center"
@@ -40,7 +66,7 @@ function Home() {
             <Hero image={heroImage} id="top">
                 <span className="top_brand">Nagara Create</span>
                 <br />
-                <span className="top_copy">キャッチコピー</span>
+                <span className="top_copy">{catchCopy}</span>
             </Hero>
 
             <Main>
@@ -107,11 +133,12 @@ function Home() {
                     <p>あくまで目安です　詳細は見積から</p>
                     <br />
                     <HStack justify_content={"center"}
-                            align_items={"stretch"}
+                        align_items={"stretch"}
                     >
                         <Card
                             title={"ライト"}
                             link={{ to: "/services/plans#light", text: "詳細をみる" }}
+                            titleCss={{ justifyContent: "center" }}
                         >
                             まずは名刺代わりに<br />
                             コストを抑えたプラン<br />
@@ -137,6 +164,7 @@ function Home() {
                         <Card
                             title={"ベーシック"}
                             link={{ to: "/services/plans#basic", text: "詳細をみる" }}
+                            titleCss={{ justifyContent: "center" }}
                         >
                             お店の魅力をしっかり伝える、<br />
                             長良クリエイトの王道プラン<br />
@@ -162,6 +190,7 @@ function Home() {
                         <Card
                             title={"プレミアム"}
                             link={{ to: "/services/plans#premium", text: "詳細をみる" }}
+                            titleCss={{ justifyContent: "center" }}
                         >
                             Google Analyticsや特注ページ<br />
                             ビジネスを加速させる<br />
